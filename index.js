@@ -74,7 +74,7 @@ function placeOrder(cardNumber) {
   if (cardNumber){
     var totalcost = total();
     cart = [];
-    return ("Your total cost is $" + totalcost + ", which will be charded to the card " + cardNumber + ".");
+    return ("Your total cost is $" + totalcost + ", which will be charged to the card " + cardNumber + ".");
     } else {  // ends if "then" starts if "do otherwise"
       return ("Sorry, we don't have a credit card on file for you.");
   } // ends if (cardnumber)
