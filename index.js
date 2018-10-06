@@ -10,12 +10,45 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var orgCartLen = cart.length;
+
+  cart.push({itemName:item, itemPrice:Math.floor(Math.random() * 101)});
+
+  if (cart.length > orgCartLen){
+   return (item + " has been added to your cart.");
+  }
 }
 
 function viewCart() {
-  // write your code here
-}
+
+  var cartString = "In your cart, ";
+  var i = 0;
+
+  do{
+	console.log(i);
+    switch (i <= cart.length){
+		case i === 0 && i === cart.length:  //i = 0 and cart is empty
+			 cartString = "Your shopping cart is empty.";
+			 break;
+		case i === 0 && cart.length === 1:  //i = 0 and cart has one item in it
+			 cartString = cartString.concat(`you have ${cart[i].itemName} at $${cart[i].itemPrice}.`);
+			 break;
+		case i === 1 && i < cart.length:  //i is 1, cart has items in it
+			 cartString = cartString.concat(`you have ${cart[i-1].itemName} at $${cart[i-1].itemPrice},`);
+			 break;
+		case i > 1 && i < cart.length:
+			 cartString = cartString.concat(` ${cart[i-1].itemName} at $${cart[i-1].itemPrice},`);
+			 break;
+		case i > 1 && i === cart.length:
+			 cartString = cartString.concat(` and ${cart[i-1].itemName} at $${cart[i-1].itemPrice}.`);
+		} // ends switch
+		i++;
+	} while (i <= cart.length);
+ 
+ return (cartString);
+
+} //ends function viewCart
+
 
 function total() {
   // write your code here
