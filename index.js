@@ -64,12 +64,14 @@ function removeFromCart(item) {
   // write your code here
   var i;
   
-  for (i=0; i<cart.length, i++){
-    if (cart[i].itemName = name){
+  for (i=0; i<cart.length; i++){
+    if (cart[i].itemName === name){
       cart.splice(i,1);
+     } else if (i === cart.length) {
+       return ("That item is not in your cart.");
       } else {
-        i++:
-      } // ends if else  
+        i++;
+     } // ends if else  
     } // ends if (cart[i].itemName = name)
   } // ends for
 } // ends function
