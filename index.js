@@ -66,7 +66,7 @@ function removeFromCart(item) {
   
   for (i=0; i<cart.length, i++){
     if (cart[i].itemName = name){
-      cart.splice(i,1,)
+      cart.splice(i,1)
     }
   }
 }
