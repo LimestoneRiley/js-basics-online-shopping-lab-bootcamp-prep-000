@@ -51,7 +51,6 @@ function viewCart() {
 
 
 function total() {
-  // write your code here
   var i;
   var total = 0;
   
