@@ -61,7 +61,6 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
   var i;
   
   for (i=0; i<cart.length; i++){
@@ -72,4 +71,11 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
+  if (cardNumber){
+    var totalcost = total();
+    cart = [];
+    return "Your total cost is " + totalcost + ", which will be charded to the card " cardNumber + ".";
+    } else {  // ends if "then" starts if "do otherwise"
+      return "Sorry, we don't have a card on file for you.";
+  } // ends if (cardnumber)
 }
